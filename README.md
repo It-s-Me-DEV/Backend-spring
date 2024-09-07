@@ -1,4 +1,4 @@
-# Backend-spring-
+# Backend-spring
 spring study
 
 1. 매주 1장씩 study 진행
