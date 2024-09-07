@@ -7,9 +7,6 @@
 ## ✨사용 스택✨
 [![Springboot](https://img.shields.io/badge/Springboot-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Springboot)
 
-## ✨Most Used Language✨
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=It-s-Me-DEV)](https://github.com/anuraghazra/github-readme-stats)
-
 ## ✨스프링부트 스터디✨
 
 1. 매주 1장씩 study 진행
