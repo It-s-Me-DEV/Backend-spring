@@ -5,7 +5,7 @@
 대학 연합 창업 동아리 ITisme(잇츠미)의 개발부-백엔드 리포지토리입니다.
 
 ## ✨사용 스택✨
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fgodekdls.github.io%2FSpring%2520Boot%2Fspring-boot-features%2F&psig=AOvVaw2r07mHs2H_GiFXxMwh6IBj&ust=1725783129266000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjXuqaxsIgDFQAAAAAdAAAAABAY
+[![Springboot](https://img.shields.io/badge/Springboot-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Springboot)
 
 ## Backend-spring
 spring study
