@@ -82,3 +82,25 @@
   - 관점 지향 프로그래밍(AOP): 프로그래밍에 대한 관심을 핵심 관점, 부가 관점으로 나누어서 관심 기준으로 모듈화 하는 것
 
   - 이식 가능한 서비스 추상화(PSA): 스프링에서 제공하는 다양한 기술들은 추상화해 개발자가 쉽게 사용하는 인터페이스
+
+## 스프링 부트 3
+
+### 스프링 부트 스타터
+
+: 의존성이 모여 있는 그룹을 의미하며 스타터를 사용하여 필요한 기능을 간편하게 설정할 수 있음
+
+- spring-boot-starter-{작업유형}의 명명 규칙을 따름
+
+### 애너테이션
+
+: 자바 소스 코드에 추가하는 표식으로 메타데이터의 목적으로 기호 앞에 @를 붙여 사용함
+
+1. @SpringBootApplication
+
+   - @SpringBootConfiguration: 스프링 부트 관련 설정을 나타내는 애너테이션
+
+   - @CompronentScan: 사용자가 등록한 빈을 읽고 등록하는 애너테이션
+  
+     - @component라는 애너테이션이 있는 클래스가 빈으로 등록되며, @Controller, @RestController, @Configuration, @Repository, @Service 모두 @Component 애너테이션을 가지고 있으므로  @Component처럼 취급
+
+   - @EnableAutoConfiguration: 스프링 부트에서 자동 구석을 활성화하는 애너테이션
