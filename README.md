@@ -4,10 +4,13 @@
 # 👋 소개
 대학 연합 창업 동아리 ITisme(잇츠미)의 개발부-백엔드 리포지토리입니다.
 
+# 🙍 Members
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=oooooming&theme=radical&show_icons=true)
+
 # 💻 사용 스택
 [![Springboot](https://img.shields.io/badge/Springboot-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Springboot)
 
-# ✏️ 스프링부트 스터디
+# ✏️ 스프링부트 스터디 규칙
 
 1. 매주 1장씩 study 진행
 2. 스터디 참여자는 It’s Me Study organization의 backend 리퍼지토리 주차별 디렉토리에 키워드 노트/과제코드 commit하기(안한사람 패널티?)
@@ -38,3 +41,4 @@
    - 13주차~14주차(12/9-12/22) 기말고사기간 휴동
 
    대면 플젝 진행: https://github.com/woowacourse-teams/2021-jujeol-jujeol/tree/develop 이 프로젝트와 우리가 주차마다 공부하는 범위와 대응되는 범위의 코드를 주차마다 분석하고 따라서 코딩하기!
+
