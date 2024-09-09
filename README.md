@@ -1,19 +1,19 @@
 ![afagfa](https://github.com/user-attachments/assets/d51a8282-72e3-4eee-b793-3819bde93942)
 
 
-## ✨소개✨
+# 소개
 대학 연합 창업 동아리 ITisme(잇츠미)의 개발부-백엔드 리포지토리입니다.
 
-## ✨사용 스택✨
+# 사용 스택
 [![Springboot](https://img.shields.io/badge/Springboot-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Springboot)
 
-## ✨스프링부트 스터디✨
+# 스프링부트 스터디
 
 1. 매주 1장씩 study 진행
 2. 스터디 참여자는 It’s Me Study organization의 backend 리퍼지토리 주차별 디렉토리에 키워드 노트/과제코드 commit하기(안한사람 패널티?)
 3. 스터디 당일 스터디 진행: 자유토의, 질문 공유 -> 프로젝트 코드 작성 및 리뷰
 
-   ### 주차별 스터디 계획
+   ## 주차별 스터디 계획
 
    2주차: 2장-3장 공부하고 요점정리노트 깃에 올리기 / 추석주라 대면은 진행x
 
