@@ -427,7 +427,7 @@ SpringApplication.run()메서드는 애플리케이션을 실행한다.
 
 
 
-####@SpringBootConfiguration 
+#### @SpringBootConfiguration 
 : 스프링 부트 관련 설정을 나타내는 애너테이션이다. 
 
 
@@ -436,20 +436,20 @@ SpringApplication.run()메서드는 애플리케이션을 실행한다.
 
 
 
-####@ComponentScan
+#### @ComponentScan
 : 사용자가 등록한 빈을 읽고 등록하는 애너테이션이다. 
 
 이 애너테이션은 @Component라는 애너테이션을 가진 클래스들을 찾아 빈으로 등록하는 역할을 한다.
 
 
-@EnableAutoConfiguration
+#### @EnableAutoConfiguration
 : 스프링 부트에서 자동 구성을 활성화하는 애너테이션이다.
 
 이 애너테이션은 부트 서버가 실행될 때 스프링 부트의 메타 파일을 읽고 정의된 설정들을 자동으로 구성하는 역할을 수행한다.
 
 
 
-###테스트 컨트롤러 살펴보기
+### 테스트 컨트롤러 살펴보기
 ```
 @RestController
 public class TestController {
@@ -479,7 +479,7 @@ public class TestController {
 
 
 
-##핵심 요약
+## 핵심 요약
 
 
 1. 스프링은 엔터프라이즈 애플리케이션을 쉽게 개발할 수 있도록 도와주는 프레임워크이다.
