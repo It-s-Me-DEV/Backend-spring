@@ -202,7 +202,7 @@ MyBean 클래스의 빈 이름은 myBean이다.
 @Component
 public class MyBean {
 }
-
+```
 
 
 
