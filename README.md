@@ -13,7 +13,7 @@
 [![Springboot](https://img.shields.io/badge/Springboot-5-orange)](https://developer.mozilla.org/en-US/docs/Web/Springboot)
 
 # Most Used Language
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=compact)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=oooooming&layout=compact)
 
 # ✏️ 스프링부트 스터디 규칙
 
