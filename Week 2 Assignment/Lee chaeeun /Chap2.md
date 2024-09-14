@@ -143,7 +143,7 @@ public class A {
 
 
 
-스프링 컨테이너가 B 객체를 만들어 클래스 A에게 전달한다.
+-> 스프링 컨테이너가 B 객체를 만들어 클래스 A에게 전달한다.
 
 
 
@@ -175,6 +175,14 @@ public class A {
 
 빈은 스프링 컨테이너가 생성하고 관리하는 객체이다. 
 
+```
+public class A {
+ // A에서 B를 주입받음
+  @Autowired
+  B b:
+}
+```
+
 
 
 
@@ -189,6 +197,12 @@ Mybean이라는 클래스에 @Component 애너테이션을 붙이면 Mybean 클�
 이때 빈의 이름은 클래스 이름의 첫 글자를 소문자로 바꿔서 관리한다.
 
 MyBean 클래스의 빈 이름은 myBean이다.
+
+```
+@Component
+public class MyBean {
+}
+
 
 
 
@@ -209,8 +223,10 @@ AOP는 OOP를 대신하는 개념이 아니라, 기존 OOP를 더욱 보완, 확
 
 
 
-Spring에서는 일반적으로 사용하는 클래스에서 중복되는 공통 코드 부분(commit, rollback, log처리)을 별도의 영역으로 분리하고, 코드가 시행 되기 전이나 이 후의 시점에 해당 코드를 붙여 넣음으로써 소스 코드의 중복을 줄이고, 필요할 때 마다 가져다 쓸 수 있게 하는 기술이다. 
+Spring에서는 일반적으로 사용하는 클래스에서 중복되는 공통 코드 부분(commit, rollback, log처리)을 별도의 영역으로 분리하고, 코드가 시행 되기 전이나 이 후의 시점에 해당 코드를 붙여 넣음으로써 소스 코드의 중복을 줄이고, 필요할 때 마다 가져다 쓸 수 있게 하는 기술이다.
 
+
+![GitHub 로고](https://blog.kakaocdn.net/dn/bpVCmx/btsJropuDSg/4wMA1PlcCw9P1Pc2U0nrwK/img.png)
 
 
 
@@ -253,7 +269,7 @@ Portable은 JDBC Driver의 종류를 비즈니스 로직의 수정없이 언제�
 
 
 
-이러한 것은 추상화 계층이 존재하기 때문에 가능한 것이다.
+이러한 것은 **추상화 계층**이 존재하기 때문에 가능한 것이다.
 
 모든 JDBC Driver는 공통적인 인터페이스를 가지고 있기 때문에 해당 인터페이스를 구현하는 어떤 것으로 대체되든 프로젝트에 영향이 없어진다. 
 
@@ -287,18 +303,15 @@ Portable은 JDBC Driver의 종류를 비즈니스 로직의 수정없이 언제�
 
 
 
-Spring은 Spring Web MVC, Spring Transaction, Spring Cache 등의 다양한 PSA를 제공한다.
+**Spring은 Spring Web MVC, Spring Transaction, Spring Cache 등의 다양한 PSA를 제공한다.**
 
 
 
 Spring PSA는 추상화 계층을 추가해 서비스를 추상화하고 여러 서비스를 비즈니스 로직을 수정하지 않고 교체할 수 있도록 하는 것을 의미한다.
 
+![GitHub 로고](https://blog.kakaocdn.net/dn/eeu2jV/btsJrRdE0Yn/qvmV9gakvKIqapMxjbcBqk/img.png)
 
-
-
-
-
-추상화 계층의 인터페이스인 Platform TransactionManager 인터페이스
+-> 추상화 계층의 인터페이스인 Platform TransactionManager 인터페이스
 
 
 
@@ -312,12 +325,11 @@ Spring PSA는 추상화 계층을 추가해 서비스를 추상화하고 여러 
 
 
 
-
-
 # 2.3 스프링 부트 3 둘러보기
 
 이 코드는 사용자가 /test GET 요청을 하면 "Hello, world!" 문자열을 반환하게 해준다. 
 
+```
 package me.shinsunyoung.springbootdeveloper;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -330,16 +342,10 @@ public class TestController {
      return"Hello, world!";
    }
 }
+```
 
 
-
-
-웹 브라우저에 http://localhost:8080/test로 접속하면 화면에 지정한 문자열이 출력이 된다. 
-
-
-
-
-http://localhost:8080/test 
+##### http://localhost:8080/test 
 
 
 localhost는 아이피로 127.0.0.1이다. 
@@ -352,7 +358,7 @@ localhost는 현재 사용중인 컴퓨터,
 
 
 
-스프링 부트 스타터
+## 스프링 부트 스타터
 
 
 스프링 부트 스타터는 의존성이 모여 있는 그룹이다. 
@@ -361,52 +367,36 @@ localhost는 현재 사용중인 컴퓨터,
 
 스타터는 spring-boot-starter-{작업유형}이라는 명명규칙이 있다. 
 
-그래서 예를 들어, jdbc 관련 스타터는 spring-boot-starter-jdbc이다. 
-
-
-
-스타터 	설명
-spring-boot-starter-web	Spring MVC를 사용해 Restful 웹 서비스를 개발 할 때 필요한 의존성 모음
-spring-boot-starter-test	스프링 애플리케이션을 테스트하기 위해 필요한 의존성 모음
-spring-boot-starter-validation	유효성 검사를 위해 필요한 의존성 모음
-spring-boot-starter-actuator	모니터링을 위해 애플리케이션에서 제공하는 다양한 정보를 제공하기 쉽게 하는 의존성 모음
-spring-boot-starter-data-jpa	ORM을 사용하기 위한 인터페이스의 모음인 JPA를 더 쉽게 사용하기 위한 의존성 모음
-
 
 build.gradle에 들어가면
 
 현재 내가 사용하고 있는 web 스타터와 test 스타터가 의존성으로 명시되어 있다.
 
+```
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+```
 
 
 IDE의 가장 오른쪽에 있는 [Gradle] 탭에 Dependencies 항목을 누르면 스타터를 확인할 수 있고 각 스타터에 어떤 의존성이 있는지도 볼 수 있다. 
 
 
 
-자동구성
-
-
+## 자동구성
 
 스프링 부트에서는 애플리케이션이 최소한의 설정만으로도 실행되게 여러 부분을 자동으로 구성한다.
-
-
 
 스프링 부트는 서버를 시작할 때 구성 파일을 읽어와서 설정한다.
 
 -> 이를 자동 설정이라고 한다. 
 
 
+# 2.4 스프링 부트 3 코드 이해하기
 
-스프링 부트에서는 빈이 자동으로 등록되고 구성된다. 만약 이런 자동 구성이 없었더라면 개발자가 특정 기술을 사용할 때마다 설정해야 하는 값을 모두 개발자가 직접 설정해야 한다. 
-
-
-
-2.4 스프링 부트 3 코드 이해하기 
-@SpringBootApplication 이해하기
+## @SpringBootApplication 이해하기
+```
 package me.shinsunyoung.springbootdeveloper;
 
 import org.springframework.boot.SpringApplication;
@@ -418,6 +408,7 @@ public class SpringBootDeveloperApplication {
        SpringApplication.run(SpringBootDeveloperApplication.class, args);
     }
 }
+```
 
 
 이 클래스는 자바의 main()메서드와 같은 역할을 한다.
@@ -436,7 +427,7 @@ SpringApplication.run()메서드는 애플리케이션을 실행한다.
 
 
 
-@SpringBootConfiguration 
+####@SpringBootConfiguration 
 : 스프링 부트 관련 설정을 나타내는 애너테이션이다. 
 
 
@@ -445,18 +436,12 @@ SpringApplication.run()메서드는 애플리케이션을 실행한다.
 
 
 
-@ComponentScan
+####@ComponentScan
 : 사용자가 등록한 빈을 읽고 등록하는 애너테이션이다. 
 
 이 애너테이션은 @Component라는 애너테이션을 가진 클래스들을 찾아 빈으로 등록하는 역할을 한다.
 
-@Component를 감싸는 애너테이션이 있는데 실제 개발을 하면 @Component 애너테이션보다는  용도에 따라 아래 표에 있는 애너테이션을 사용한다. 
 
-애너테이션명	설명
-@Configuration	설정 파일 등록
-@Repository	ORM 매핑
-@Controller, @RestController	라우터
-@Service	비즈니스 로직
 @EnableAutoConfiguration
 : 스프링 부트에서 자동 구성을 활성화하는 애너테이션이다.
 
@@ -464,17 +449,17 @@ SpringApplication.run()메서드는 애플리케이션을 실행한다.
 
 
 
-테스트 컨트롤러 살펴보기
+###테스트 컨트롤러 살펴보기
+```
 @RestController
 public class TestController {
  	@GetMapping("/test")
  		public String test()
 		 return "Hello, world!";
  		}
- }
- 
+ } 
  /test GET 요청이 오면 test() 메서드가 실행된다.
-
+```
 
 @RestController는 라우터 역할을 하는 애너테이션이다. 
 
@@ -494,7 +479,7 @@ public class TestController {
 
 
 
-핵심 요약
+##핵심 요약
 
 
 1. 스프링은 엔터프라이즈 애플리케이션을 쉽게 개발할 수 있도록 도와주는 프레임워크이다.
