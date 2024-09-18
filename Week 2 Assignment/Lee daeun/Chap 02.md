@@ -103,7 +103,8 @@ swith-case문으로 자료형에 맞게 case를 처리할 수 있다.
 <img width="572" alt="스크린샷 2024-09-18 오후 10 32 01" src="https://github.com/user-attachments/assets/c3dd8fb0-e046-4f21-9f79-de511058bebc">
 
 #### 2. http://localhost:8080/test 접속해보기
-![스크린샷 2024-09-16 오후 2 49 21](https://github.com/user-attachments/assets/933f708a-f5e2-4ccb-bdc7-a1d98529d4b0)
+<img width="625" alt="스크린샷 2024-09-18 오후 10 32 09" src="https://github.com/user-attachments/assets/f7b3a2ec-816f-4bab-9187-fcc1636ebc8a">
+
 
 **스프링 부트 스타터란 의존성이 모여 있는 그룹으로 필요한 기능을 간편하게 설정할 수 있고 spring-boot-starter-{작업유형}의 형태이다**
 
