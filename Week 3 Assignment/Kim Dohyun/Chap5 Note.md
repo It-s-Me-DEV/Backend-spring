@@ -18,11 +18,10 @@
  
 ### 데이터 조회: SELECT 문
   // 기본구조
-  SELECT <무엇을?>
-  
-  FROM <어디에서?>
-  
+  SELECT <무엇을?> 
+  FROM <어디에서?>  
   WHERE <무슨?>
+  
   // 예시
   SELECT name
   FROM customers
@@ -31,6 +30,7 @@
   // 기본구조
   INSERT INTO <어디에?>
   VALUES <어떤 값을?>
+  
   // 예시
   INSERT INTO customers (name, phone_number, age)
   VALUES ('박사번', '010-4444-4444', 40);
@@ -38,6 +38,7 @@
   //기본 구조
   DELETE FROM <어디에서>
   WHERE <어떤 조건으로?>;
+  
   //예시
   UPDATE customers 
   SET name = '김일' 
@@ -48,6 +49,7 @@
   UPDATE <어디에?> 
   SET <무슨 컬럼을? = 어떤 값으로?> 
   WHERE <어떤 조건으로?>
+  
   // 예시
   UPDATE customers 
   SET name = '김일' 
@@ -69,6 +71,7 @@
 ## JPA와 하이버네이트
   JPA: 자바에서 관계형 데이터베이스를 사용하는 방식을 정의한 인터페이스.
   영속성 관리 및 엔티티 상태를 관리하는 엔티티 매니저.
+  
   하이버네이트: JPA의 대표적인 구현체로, 자바 언어를 위한 ORM 프레임워크.
 
   하이버네이트와 같은 ORM 프레임워크를 사용해 자바 객체를 통해 데이터베이스 종류에 상관없이 데이터베이스를 자유롭게 사용
