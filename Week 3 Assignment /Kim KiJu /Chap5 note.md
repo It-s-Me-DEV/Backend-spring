@@ -38,13 +38,54 @@
 
 
 
+# 5.4 스프링 데이터와 스프링 데이터 JPA
+---
+
+스프링 데이터 JPA -> 
+
+
+- @Sql("/insert-members.sql") -> 테스트 실행전에 sql문 실행.
+
+- @Query("select ~~") -> SQL 쿼리문을 직접 사용해야하는 경우 Query 어노테이션 사용.
+  
+- save() -> INSERT문 사용. given
 
 
 
+-memberRepository.findAll(): 멤버 엔티티 모두조회
+
+-memberRepository.findById(2L).get(): id(PK)로 엔티티 조회
+
+- PK가 아닌 값으로 조회하는 메서드 사용하기(PK가 아닌 값으로 조회하는 메서드는 기본제공으로 주어지지않는다.)
+-> JpaRepository 인터페이스를 상속받는 MemberRepository 인터페이스에 findByName()메서드추가
+- public interface MemberRepository extends JpaRepository<Member, Long>
+
+- memberRepsotiry.save(): 멤퍼 엔티티 insert
+
+- memberRepository.saveAll(): 멤버 엔티티 리스트 insert
+
+- memberRepsotiry.deleteById(): id(PK)로 엔티티 삭제
+  
+- memberRepsotiry.deleteAll(): 모든 데이터삭제. 테스트간 영향을 미치지 않기 위해 전체삭제는 AfterEach에서 주로 쓰인다.
+
+- member.changeName(): Member.java에서 public void changeName(String name){ this.name = name; } 추가.
+  -> 업데이트 기능 사용시에는 원래 반드시 @Transactional 트랜잭션을 사용해야함. 하지만 @DataJpaTest에 포함되어있으므로 생략.
 
 
+# 5.5 예제코드 알기
+---
 
+@Entity: 해당 클래스를 db테이블과 매핑. name=""를 쓰면 해당 테이블과 매핑. 안쓰면 클래스명 테이블과 매핑.
 
+@NoArgsConstructor(access = AccessLevel.PROTECTED): 기본생성자.
+
+@Id: 기본키 지정
+
+@GeneratedValue(strategy = GenerationType.IDENTITY): 기본키 자동으로 1씩증가.
+
+@Column: db 컬럼과 매핑.
+
+레포지토리: db CRUD에 사용하는 인터페이스로, 스프링 데이터 JPA에서 제공하는 JpaRepository 클래스 인터페이스를 상속받아 구현. 이떄, 엔티티 Member와 엔티티의 기본키 타입 Long을 인수로 넣어준다. JpaRepository에서 제공하는 기본 메서드 사용가능.
 
 
 
