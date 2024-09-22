@@ -60,3 +60,16 @@
 
 <img width="604" alt="스크린샷 2024-09-22 오후 5 37 01" src="https://github.com/user-attachments/assets/45e6a197-041f-46ea-8616-8d9ce49c67d0">
 
+**Given-When-Then 패턴**
+1). Given : 멤버를 저장한다.
+2). When : 멤버 리스트를 조회하는 API를 호출한다.
+3). Then : 응답코드가 200 OK이고, 반환받은 값 중에 0번째 요소의 id와 name이 저장된 값과 같은지 확인한다.
+
+```
+Code code = new Code(13)
+objectMapper.writeValueAsString(code)
+```
+-> ObjectMapper은 Jackson 라이브러리에서 제공하는 클래스로 객체와 JSON간의 변환을 처리해준다. new Code(13)과 같이 객체로 만들고 writeValueAsString(code)와 같이 매서드를 호출하면 JSON 형태로 문자열 객체가 변환된다.<객체 직렬화>
+
+-> {'value':13}의 형태로 출력
+
