@@ -38,6 +38,7 @@
 <img width="254" alt="스크린샷 2024-09-21 오후 9 42 26" src="https://github.com/user-attachments/assets/6ac0c437-460c-49d1-b7b1-b36eb16b47e5">
 
 **애너테이션**
+
 1). @BeforeAll 애너테이션
 : 전체 테스트 전 한 번만 실행되는데, 데이터베이스를 연결하거나 테스트 환경을 초기화 할 때 사용된다. 이때 한 번만 호출 되어야 하므로 static으로 선언한다.
 
@@ -51,6 +52,7 @@
 : 각 테스트 케이스를 종료하기 전 매번 실행, 특정 테이터를 삭제할때 사용 static이면 안됨
 
 **@BeforeAll -> @BeforeEach -> @Test -> @AfterEach -> @AfterAll**
+
 <img width="414" alt="스크린샷 2024-09-22 오후 5 24 56" src="https://github.com/user-attachments/assets/a862ad24-332e-444e-a66f-0f1a5255d4e9">
 
 ### AssertJ로 검증문 가독성 높이기
@@ -61,9 +63,12 @@
 <img width="604" alt="스크린샷 2024-09-22 오후 5 37 01" src="https://github.com/user-attachments/assets/45e6a197-041f-46ea-8616-8d9ce49c67d0">
 
 **Given-When-Then 패턴**
-1). Given : 멤버를 저장한다.
-2). When : 멤버 리스트를 조회하는 API를 호출한다.
-3). Then : 응답코드가 200 OK이고, 반환받은 값 중에 0번째 요소의 id와 name이 저장된 값과 같은지 확인한다.
+
+>1). Given : 멤버를 저장한다.
+
+>2). When : 멤버 리스트를 조회하는 API를 호출한다.
+
+>3). Then : 응답코드가 200 OK이고, 반환받은 값 중에 0번째 요소의 id와 name이 저장된 값과 같은지 확인한다.
 
 ```
 Code code = new Code(13)
