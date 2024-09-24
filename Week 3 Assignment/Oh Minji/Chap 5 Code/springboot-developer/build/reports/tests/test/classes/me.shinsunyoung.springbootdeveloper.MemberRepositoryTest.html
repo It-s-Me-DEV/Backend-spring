@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - MemberRepositoryTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>MemberRepositoryTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/me.shinsunyoung.springbootdeveloper.html">me.shinsunyoung.springbootdeveloper</a> &gt; MemberRepositoryTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.984s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllMembers()</td>
+<td class="success">0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getMemberById()</td>
+<td class="success">2.389s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getMemberByName()</td>
+<td class="success">0.325s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveMember()</td>
+<td class="success">0.148s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveMembers()</td>
+<td class="success">0.067s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>18:30:25.007 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [me.shinsunyoung.springbootdeveloper.MemberRepositoryTest]: MemberRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:30:25.614 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration me.shinsunyoung.springbootdeveloper.SpringBootDeveloperApplication for test class me.shinsunyoung.springbootdeveloper.MemberRepositoryTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2024-09-24T18:30:27.579+09:00  INFO 16968 --- [    Test worker] m.s.s.MemberRepositoryTest               : Starting MemberRepositoryTest using Java 17.0.12 with PID 16968 (started by minji in C:\Users\minji\IdeaProjects\springboot-developer)
+2024-09-24T18:30:27.584+09:00  INFO 16968 --- [    Test worker] m.s.s.MemberRepositoryTest               : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-09-24T18:30:29.269+09:00  INFO 16968 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-09-24T18:30:29.467+09:00  INFO 16968 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166 ms. Found 1 JPA repository interface.
+2024-09-24T18:30:29.610+09:00  INFO 16968 --- [    Test worker] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-09-24T18:30:30.206+09:00  INFO 16968 --- [    Test worker] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:fdc47a72-0f1b-4424-939d-7daa495f3e58;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-09-24T18:30:31.469+09:00  INFO 16968 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-09-24T18:30:31.784+09:00  INFO 16968 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.3.1.Final
+2024-09-24T18:30:31.934+09:00  INFO 16968 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-09-24T18:30:33.099+09:00  INFO 16968 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-09-24T18:30:36.949+09:00  INFO 16968 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists member cascade 
+Hibernate: create table member (id bigint generated by default as identity, name varchar(255) not null, primary key (id))
+2024-09-24T18:30:37.085+09:00  INFO 16968 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-09-24T18:30:38.667+09:00  INFO 16968 --- [    Test worker] m.s.s.MemberRepositoryTest               : Started MemberRepositoryTest in 12.669 seconds (process running for 17.174)
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.id=?
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.name=?
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.id=?
+Hibernate: insert into member (name,id) values (?,default)
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.id=?
+Hibernate: insert into member (name,id) values (?,default)
+Hibernate: select m1_0.id,m1_0.name from member m1_0 where m1_0.id=?
+Hibernate: insert into member (name,id) values (?,default)
+Hibernate: select m1_0.id,m1_0.name from member m1_0
+Hibernate: select m1_0.id,m1_0.name from member m1_0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.8</a> at 2024. 9. 24. 오후 6:30:41</p>
+</div>
+</div>
+</body>
+</html>
