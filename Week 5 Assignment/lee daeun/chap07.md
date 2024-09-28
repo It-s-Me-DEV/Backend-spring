@@ -30,6 +30,7 @@
 **타임리프를 사용하기 위해 build.gradle 파일에 의존성 "implemetation 'org.springframework.boot:spring-boot-starter-thymeleaf'를 추가한다**
 
 ### controller 패키지에 ExampleController.java 파일 추가
+
 <img width="734" alt="스크린샷 2024-09-28 오후 2 08 02" src="https://github.com/user-attachments/assets/f3e12d31-daf9-458a-861d-3407a7c2ddbf">
 
 - Model 모델 객체는 뷰, 즉 HTML에 값을 넘겨주는 객체이다.
@@ -64,3 +65,51 @@
 
 ### articleList.html
 resource/templates 디렉터리에 aricleList.html을 만들고 모델에 전달한 블로그 글 리스트 개수만큼 반복해 글 정보를 보여준다.
+
+<img width="772" alt="스크린샷 2024-09-28 오후 6 17 29" src="https://github.com/user-attachments/assets/de96bf38-6be6-4d44-8cb8-c461e9a97b61">
+
+1. th:each로 "articles" 키에 담긴 데이터 개수만큼 반복
+2. th:text로 id, "text"를 출력
+
+**서버에 접속해보기**
+
+<img width="1108" alt="스크린샷 2024-09-28 오후 6 45 15" src="https://github.com/user-attachments/assets/7ae7215b-74f7-4517-a870-9f39387da8f1">
+
+다음과 같이 정상적으로 작동하는 것을 확인할 수 있다.
+
+### Article.java 코드 작성
+
+<img width="345" alt="스크린샷 2024-09-28 오후 6 48 26" src="https://github.com/user-attachments/assets/c3cd9cfa-a583-4d8d-99ef-1d4ad5c3f3e4">
+
+위에 코드를 추가한다 이때 @CreatedDate 애너테이션을 사용해 생성 시간을 created_at 컬럼에서 저장, @LastModifiedDate 애너테이션을 이용해 엔터티가 수정된 시간을 updated_at 컬럼에 저장, @EntityListeners(AuditingEntityListener.class)눈 엔티티의 생성 및 수정시간을 자동으로 감시
+
+### ArticleViewResponse.java 코드 작성
+<img width="587" alt="스크린샷 2024-09-28 오후 6 54 16" src="https://github.com/user-attachments/assets/5c6cefa0-92c7-41f2-b612-f31218e3a066">
+
+### BlogViewController.java 코드 작성
+<img width="667" alt="스크린샷 2024-09-28 오후 6 57 34" src="https://github.com/user-attachments/assets/7cffc94b-f2e5-4a56-b4a5-d9883219d1f5">
+
+### HTML 뷰 만들기
+
+### 실행화면
+
+<img width="688" alt="스크린샷 2024-09-28 오후 7 17 08" src="https://github.com/user-attachments/assets/9466a627-67cf-4270-b8f5-407c9be2379e">
+
+### 삭제 기능 추가하기
+article.js 파일 만들기
+<img width="688" alt="스크린샷 2024-09-28 오후 7 23 39" src="https://github.com/user-attachments/assets/6f56fbba-71f7-447c-b366-5801acdfc638">
+
+<img width="910" alt="스크린샷 2024-09-28 오후 7 49 38" src="https://github.com/user-attachments/assets/38edb876-e960-4743-ad4d-ea434b101fd0">
+
+### 수정/생성 기능 추가하기
+
+<img width="686" alt="스크린샷 2024-09-28 오후 8 13 11" src="https://github.com/user-attachments/assets/5d52e0de-ba87-449c-8c4d-fef6079fb38c">
+
+<img width="773" alt="스크린샷 2024-09-28 오후 8 13 37" src="https://github.com/user-attachments/assets/b3caeb84-dd97-4f20-aeba-685d08924cd4">
+
+### 글등록하기 기능 추가하기
+
+<img width="674" alt="스크린샷 2024-09-28 오후 8 24 47" src="https://github.com/user-attachments/assets/47e5a8ac-c07e-4637-b82d-e06df33ae93c">
+
+<img width="785" alt="스크린샷 2024-09-28 오후 8 25 18" src="https://github.com/user-attachments/assets/e5d0ff99-12c6-49a6-bbd0-13379bfb63ba">
+
