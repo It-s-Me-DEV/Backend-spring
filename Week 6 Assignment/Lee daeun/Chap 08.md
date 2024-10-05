@@ -34,4 +34,20 @@
 6. 사용자 아이디를 UserDetailService에 전송한 후 사용자 아이디로 사용자 정보를 만들어 provider에게 전송
 7. db에 있는 사용자의 정보와 비교해 실제인증 처리
 
-### 회원 도메인 만들기
+### 실습해보기
+
+### 실행해보기
+
+1단계). 로그인 페이지
+
+<img width="335" alt="스크린샷 2024-10-05 오후 5 50 08" src="https://github.com/user-attachments/assets/79b7e707-a6ae-4846-b0f1-a6d0502dc45b">
+
+2단계). 회원가입 페이지
+
+<img width="290" alt="스크린샷 2024-10-05 오후 5 50 45" src="https://github.com/user-attachments/assets/2cfa90fb-72d6-495b-afc1-1666a96bc4b9">
+
+3단계). 회원 등록 조회
+
+<img width="655" alt="스크린샷 2024-10-05 오후 5 54 35" src="https://github.com/user-attachments/assets/8d96d0f1-36d4-418b-ab86-2532026aae17">
+
+
