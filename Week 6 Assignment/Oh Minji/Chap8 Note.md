@@ -48,3 +48,5 @@
 
 3. 스프링 시큐리티에서 사용자 정보를 가져오는 서비스를 만듦
 
+![image](https://github.com/user-attachments/assets/4c782f49-0815-4c35-acb4-17ae2f9aa28b)
+
