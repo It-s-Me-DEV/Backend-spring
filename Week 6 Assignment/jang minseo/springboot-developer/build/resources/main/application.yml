@@ -1,0 +1,11 @@
+spring:
+  main:
+    web-application-type: none
+
+  jpa:
+    show-sql : true
+    properties:
+      hibernate:
+        format_sql : true
+
+    defer-datasource-initialization : true
